@@ -27,15 +27,15 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Personal Finance</Subtitle>
+            <Subtitle>IoTDoctor</Subtitle>
             <h1>
-              All your money,
+              An Elegant and Flexible
               <br />
-              one account
+              MQTT Dashboard
             </h1>
             <h2>
-              We're building next generation personal finance tools. Sign up to
-              get early access.
+              We're offering extensible command-and-control solutions for your
+              IoT needs.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
               <HeaderInput placeholder="Your email" />
