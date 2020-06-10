@@ -1,4 +1,6 @@
 // Theme
+const aethonBlueGray = "#3b4f58"
+const aethonSkyBlue = "#b3cdda"
 
 const theme = {
   font: {
@@ -23,8 +25,8 @@ const theme = {
   },
 
   color: {
-    primary: "#071435",
-    secondary: "#098c8c",
+    primary: aethonBlueGray,
+    secondary: aethonSkyBlue,
     accent: "#cca86e",
     background: {
       white: "#ffffff",
