@@ -2,48 +2,20 @@ import React from "react"
 import styled from "styled-components"
 
 import { Section, Container } from "../global"
+import content from "../../content.json"
 
 const Features = () => (
   <Section id="features">
     <StyledContainer>
       <Subtitle>Features</Subtitle>
-      <SectionTitle>Smart money management</SectionTitle>
+      <SectionTitle>Smart management</SectionTitle>
       <FeaturesGrid>
-        <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
-          <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Security</FeatureTitle>
-          <FeatureText>
-            Your data is always safe with us as we use the latest security
-            protocols.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Automation</FeatureTitle>
-          <FeatureText>
-            Create smart automated workflows and triggers for your money.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Aggregation</FeatureTitle>
-          <FeatureText>
-            Easily link up to 5 banks to your finance account.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Payments</FeatureTitle>
-          <FeatureText>Send money to friends and family with ease.</FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Rewards</FeatureTitle>
-          <FeatureText>
-            High interest and rewards for hitting your goals.
-          </FeatureText>
-        </FeatureItem>
+        {content.features.map(feature => (
+          <FeatureItem>
+            <FeatureTitle>{feature.title}</FeatureTitle>
+            <FeatureText>{feature.description}</FeatureText>
+          </FeatureItem>
+        ))}
       </FeaturesGrid>
     </StyledContainer>
   </Section>

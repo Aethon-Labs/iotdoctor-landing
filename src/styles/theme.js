@@ -26,7 +26,7 @@ const theme = {
 
   color: {
     primary: aethonBlueGray,
-    secondary: aethonSkyBlue,
+    secondary: aethonBlueGray,
     accent: "#cca86e",
     background: {
       white: "#ffffff",

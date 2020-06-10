@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Container } from "../global"
+import Image from "../common/image"
 
 const Footer = () => (
   <FooterWrapper id="footer">
@@ -36,7 +37,7 @@ const Footer = () => (
       </FooterColumn>
     </FooterColumnContainer>
     <BrandContainer>
-      <Logo>Finance</Logo>
+      <Logo></Logo>
     </BrandContainer>
   </FooterWrapper>
 )
