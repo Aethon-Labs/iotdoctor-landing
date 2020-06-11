@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 import AethonLogo from "../aethonLogo"
 import { Container } from "../global"
@@ -40,9 +39,9 @@ const Footer = () => (
     <LogoWrapper>
       Powered by
       <ImageWrapper>
-        <AethonLink href="https://aethonlabs.com">
+        <a href="https://aethonlabs.com">
           <AethonLogo />
-        </AethonLink>
+        </a>
       </ImageWrapper>
     </LogoWrapper>
   </FooterWrapper>
@@ -54,31 +53,6 @@ const FooterWrapper = styled.footer`
   padding: 0 0 80px;
 `
 
-const Logo = styled.div`
-  font-family: ${props => props.theme.font.extrabold};
-  ${props => props.theme.font_size.regular};
-  color: ${props => props.theme.color.black.regular};
-  text-decoration: none;
-  letter-spacing: 1px;
-  margin: 0;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 9;
-  text-decoration: none;
-  outline: 0px;
-`
-
-const BrandContainer = styled(Container)`
-  position: relative;
-  padding-top: 48px;
-  display: flex;
-  align-items: flex-end;
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-  }
-`
 const FooterColumnContainer = styled(Container)`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -118,10 +92,6 @@ const LogoWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   width: 10%;
-`
-
-const AethonLink = styled.a`
-  text-decoration: none;
 `
 
 export default Footer
