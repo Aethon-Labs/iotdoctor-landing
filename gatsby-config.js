@@ -3,6 +3,7 @@ module.exports = {
     title: `IoT Doctor`,
     description: `An Elegant and Flexible
     MQTT Dashboard`,
+    author: `Luke Lopez, Aethon Labs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
