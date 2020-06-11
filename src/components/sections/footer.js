@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
+import AethonLogo from "../aethonLogo"
 import { Container } from "../global"
-import Image from "../common/image"
 
 const Footer = () => (
   <FooterWrapper id="footer">
@@ -36,9 +37,14 @@ const Footer = () => (
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
-    <BrandContainer>
-      <Logo></Logo>
-    </BrandContainer>
+    <LogoWrapper>
+      Powered by
+      <ImageWrapper>
+        <AethonLink href="https://aethonlabs.com">
+          <AethonLogo />
+        </AethonLink>
+      </ImageWrapper>
+    </LogoWrapper>
   </FooterWrapper>
 )
 
@@ -100,6 +106,22 @@ const FooterColumn = styled.div`
       font-size: 15px;
     }
   }
+`
+
+const LogoWrapper = styled.div`
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  opacity: 60%;
+  margin: 1em;
+`
+
+const ImageWrapper = styled.div`
+  width: 10%;
+`
+
+const AethonLink = styled.a`
+  text-decoration: none;
 `
 
 export default Footer

@@ -1,6 +1,5 @@
 // Theme
 const aethonBlueGray = "#3b4f58"
-const aethonSkyBlue = "#b3cdda"
 
 const theme = {
   font: {
