@@ -17,9 +17,29 @@ const Header = () => {
       }
     }
   `)
+  const [submitButtonText, setSubmitButtonText] = React.useState(
+    "Get early access"
+  )
+  const emailInput = React.useRef()
 
   const handleSubmit = event => {
     event.preventDefault()
+    setSubmitButtonText("Submitting...")
+
+    const form = document.forms["submit-to-google-sheet"]
+    fetch(
+      "https://script.google.com/macros/s/AKfycbx8CTYZiYSK_XHK849XWfRThOnUD-Vn5i7w1z3HGgrdQCihmeCq/exec",
+      { method: "POST", body: new FormData(form) }
+    )
+      .then(response => {
+        console.log("Success!", response)
+        emailInput.current.value = ""
+        setSubmitButtonText("Done!")
+      })
+      .catch(error => {
+        console.error("Error!", error.message)
+        setSubmitButtonText("Error!")
+      })
   }
 
   return (
@@ -37,9 +57,13 @@ const Header = () => {
               We're offering extensible command-and-control solutions for your
               IoT needs.
             </h2>
-            <HeaderForm onSubmit={handleSubmit}>
-              <HeaderInput placeholder="Your email" />
-              <HeaderButton>Early access</HeaderButton>
+            <HeaderForm name="submit-to-google-sheet" onSubmit={handleSubmit}>
+              <HeaderInput
+                name="email"
+                placeholder="Your email"
+                ref={emailInput}
+              />
+              <HeaderButton>{submitButtonText}</HeaderButton>
             </HeaderForm>
             <FormSubtitle>
               Already have a beta account?{" "}
