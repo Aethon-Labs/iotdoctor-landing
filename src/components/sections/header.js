@@ -60,6 +60,7 @@ const Header = () => {
             <HeaderForm name="submit-to-google-sheet" onSubmit={handleSubmit}>
               <HeaderInput
                 name="email"
+                type="email"
                 placeholder="Your email"
                 ref={emailInput}
               />
