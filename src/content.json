@@ -1,20 +1,20 @@
 {
   "features": [
     {
-      "title": "Flexibility",
-      "description": "Control your MQTT-compatible devices your way with custom commands."
+      "title": "Custom Commands",
+      "description": "Control your MQTT-compatible devices your way."
     },
     {
-      "title": "Security",
-      "description": "Your data is always safe with us as we use the latest security protocols."
+      "title": "White-Label Solutions",
+      "description": "Customize the look and feel of your MQTT dashboard."
     },
     {
-      "title": "Clarity",
-      "description": "Create workflows to guide your staff in troubleshooting technical issues."
+      "title": "Multiple Devices",
+      "description": "Monitor and control one or more devices at once."
     },
     {
-      "title": "Aggregation",
-      "description": "Control multiple devices individually or all at once."
+      "title": "Third-Party Integrations",
+      "description": "See below for the current list of supported integrations."
     }
   ]
 }
