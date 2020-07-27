@@ -24,6 +24,7 @@ const Header = () => {
 
   const handleSubmit = event => {
     event.preventDefault()
+    if (!emailInput.current.value) return
     setSubmitButtonText("Submitting...")
 
     const form = document.forms["submit-to-google-sheet"]
