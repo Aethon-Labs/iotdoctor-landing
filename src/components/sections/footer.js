@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import AethonLogo from "../aethonLogo"
 import { Container } from "../global"
 
 const Footer = () => (
@@ -37,12 +36,7 @@ const Footer = () => (
       </FooterColumn>
     </FooterColumnContainer>
     <LogoWrapper>
-      Powered by
-      <ImageWrapper>
-        <a href="https://aethonlabs.com">
-          <AethonLogo />
-        </a>
-      </ImageWrapper>
+      Powered by <Logo href="https://aethonlabs.com">Aethon Labs</Logo>
     </LogoWrapper>
   </FooterWrapper>
 )
@@ -88,6 +82,12 @@ const LogoWrapper = styled.div`
   display: flex;
   opacity: 60%;
   margin: 1em;
+`
+
+const Logo = styled.a`
+  color: ${props => props.theme.color.primary};
+  text-decoration: none;
+  font-weight: bold;
 `
 
 const ImageWrapper = styled.div`
