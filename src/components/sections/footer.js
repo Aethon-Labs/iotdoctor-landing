@@ -36,7 +36,10 @@ const Footer = () => (
       </FooterColumn>
     </FooterColumnContainer>
     <LogoWrapper>
-      Powered by <Logo href="https://aethonlabs.com">Aethon Labs</Logo>
+      Powered by{" "}
+      <Logo href="https://aethonlabs.com" referrerpolicy="origin">
+        Aethon Labs
+      </Logo>
     </LogoWrapper>
   </FooterWrapper>
 )
