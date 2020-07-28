@@ -17,9 +17,7 @@ const Header = () => {
       }
     }
   `)
-  const [submitButtonText, setSubmitButtonText] = React.useState(
-    "Get early access"
-  )
+  const [submitButtonText, setSubmitButtonText] = React.useState("Sign Up")
   const emailInput = React.useRef()
 
   const handleSubmit = event => {
