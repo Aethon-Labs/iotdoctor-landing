@@ -44,7 +44,7 @@ const Integrations = () => {
   `)
 
   return (
-    <StyledSection>
+    <StyledSection id="integrations">
       <IntegrationsContainer>
         <Subtitle>Third-Party Integrations</Subtitle>
         <IntegrationsTitle>Supercharge your workflow</IntegrationsTitle>
