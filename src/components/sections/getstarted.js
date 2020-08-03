@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { Container, Section } from "../global"
 
@@ -7,7 +8,9 @@ const GetStarted = () => (
   <Section>
     <GetStartedContainer>
       <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
-      <TryItButton>Sign Up</TryItButton>
+      <AnchorLink href="#top">
+        <TryItButton>Sign Up</TryItButton>
+      </AnchorLink>
       <Subtitle>No credit card required.</Subtitle>
     </GetStartedContainer>
   </Section>
