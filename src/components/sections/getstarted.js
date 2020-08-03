@@ -4,12 +4,12 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { Container, Section } from "../global"
 
-const GetStarted = () => (
+const GetStarted = ({ focusEmailInput }) => (
   <Section>
     <GetStartedContainer>
       <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
       <AnchorLink href="#top">
-        <TryItButton>Sign Up</TryItButton>
+        <TryItButton onClick={focusEmailInput}>Sign Up</TryItButton>
       </AnchorLink>
       <Subtitle>No credit card required.</Subtitle>
     </GetStartedContainer>

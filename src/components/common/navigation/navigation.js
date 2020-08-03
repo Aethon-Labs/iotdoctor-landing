@@ -97,7 +97,7 @@ export default class Navigation extends Component {
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
             <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-              <button>Sign up</button>
+              <button onClick={this.props.focusEmailInput}>Sign up</button>
             </AnchorLink>
           </ActionsContainer>
         </StyledContainer>

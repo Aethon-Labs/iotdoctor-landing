@@ -11,17 +11,26 @@ import Features from "../components/sections/features"
 import GetStarted from "../components/sections/getstarted"
 import Integrations from "../components/sections/integrations"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Navigation />
-    <Header />
-    <Features />
-    <Integrations />
-    <Product />
-    <GetStarted />
-    <Footer />
-  </Layout>
-)
+const IndexPage = () => {
+  const emailInput = React.useRef()
+
+  const focusEmailInput = () => {
+    if (!emailInput.current) return console.log("Ref is null.")
+    emailInput.current.focus()
+  }
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Navigation focusEmailInput={focusEmailInput} />
+      <Header emailInput={emailInput} focusEmailInput={focusEmailInput} />
+      <Features />
+      <Integrations />
+      <Product />
+      <GetStarted focusEmailInput={focusEmailInput} />
+      <Footer />
+    </Layout>
+  )
+}
 
 export default IndexPage

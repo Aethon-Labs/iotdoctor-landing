@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 import { Container } from "../global"
 
-const Header = () => {
+const Header = ({ emailInput }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "product/green-skew.png" }) {
@@ -18,7 +18,6 @@ const Header = () => {
     }
   `)
   const [submitButtonText, setSubmitButtonText] = React.useState("Sign Up")
-  const emailInput = React.useRef()
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -60,6 +59,7 @@ const Header = () => {
               <HeaderInput
                 name="email"
                 type="email"
+                id="email-form"
                 placeholder="Your email"
                 ref={emailInput}
               />
@@ -139,18 +139,6 @@ const HeaderForm = styled.form`
   @media (max-width: ${props => props.theme.screen.sm}) {
     flex-direction: column;
   }
-`
-
-const FormSubtitle = styled.span`
-  ${props => props.theme.font_size.xxsmall}
-`
-
-const FormSubtitleLink = styled(Link)`
-  color: ${props => props.theme.color.secondary};
-  padding-bottom: 1px;
-  margin-left: 8px;
-  text-decoration: none;
-  border-bottom: 1px solid ${props => props.theme.color.secondary};
 `
 
 const HeaderInput = styled.input`
