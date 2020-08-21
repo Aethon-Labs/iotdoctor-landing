@@ -93,8 +93,4 @@ const Logo = styled.a`
   font-weight: bold;
 `
 
-const ImageWrapper = styled.div`
-  width: 10%;
-`
-
 export default Footer
