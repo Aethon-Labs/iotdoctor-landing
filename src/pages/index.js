@@ -12,22 +12,22 @@ import GetStarted from "../components/sections/getstarted"
 import Integrations from "../components/sections/integrations"
 
 const IndexPage = () => {
-  const emailInput = React.useRef()
+  const nameInput = React.useRef()
 
-  const focusEmailInput = () => {
-    if (!emailInput.current) return console.log("Ref is null.")
-    emailInput.current.focus()
+  const focusNameInput = () => {
+    if (!nameInput.current) return console.log("Ref is null.")
+    nameInput.current.focus()
   }
 
   return (
     <Layout>
       <SEO title="Home" />
-      <Navigation focusEmailInput={focusEmailInput} />
-      <Header emailInput={emailInput} focusEmailInput={focusEmailInput} />
+      <Navigation focusEmailInput={focusNameInput} />
+      <Header nameInput={nameInput} focusEmailInput={focusNameInput} />
       <Features />
       <Integrations />
       <Product />
-      <GetStarted focusEmailInput={focusEmailInput} />
+      <GetStarted focusEmailInput={focusNameInput} />
       <Footer />
     </Layout>
   )

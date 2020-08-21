@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 import { Container } from "../global"
 
-const Header = ({ emailInput }) => {
+const Header = ({ nameInput }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "product/green-skew.png" }) {
@@ -18,10 +18,11 @@ const Header = ({ emailInput }) => {
     }
   `)
   const [submitButtonText, setSubmitButtonText] = React.useState("Sign Up")
+  const companyInput = React.useRef()
+  const emailInput = React.useRef()
 
   const handleSubmit = event => {
     event.preventDefault()
-    if (!emailInput.current.value) return
     setSubmitButtonText("Submitting...")
 
     const form = document.forms["submit-to-google-sheet"]
@@ -31,7 +32,9 @@ const Header = ({ emailInput }) => {
     )
       .then(response => {
         console.log("Success!", response)
+        companyInput.current.value = ""
         emailInput.current.value = ""
+        nameInput.current.value = ""
         setSubmitButtonText("Done!")
       })
       .catch(error => {
@@ -57,6 +60,19 @@ const Header = ({ emailInput }) => {
             </h2>
             <HeaderForm name="submit-to-google-sheet" onSubmit={handleSubmit}>
               <HeaderInput
+                name="name"
+                id="name-form"
+                placeholder="Your Name"
+                ref={nameInput}
+              />
+              <HeaderInput
+                name="company"
+                id="company-form"
+                placeholder="Your company"
+                ref={companyInput}
+              />
+              <HeaderInput
+                required
                 name="email"
                 type="email"
                 id="email-form"
@@ -133,6 +149,7 @@ const Flex = styled.div`
 
 const HeaderForm = styled.form`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   padding-bottom: 16px;
 
@@ -146,7 +163,8 @@ const HeaderInput = styled.input`
   font-size: 16px;
   color: ${props => props.theme.color.primary};
   line-height: 42px;
-  width: 100%;
+  margin-left: 5px;
+  margin-bottom: 5px;
   text-align: left;
   height: 60px;
   border-width: 1px;
