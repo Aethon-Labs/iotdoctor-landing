@@ -3,10 +3,9 @@ import React from "react"
 const LuckyOrange = () => {
   const ref = React.useRef(null)
 
-  window.__lo_site_id = 240726
-
   React.useEffect(() => {
     if (ref.current === null || process.env.NODE_ENV === "development") return
+    if (typeof window !== "undefined") window.__lo_site_id = 240726
     const luckyOrangeScript = document.createElement("script")
     luckyOrangeScript.async = true
     luckyOrangeScript.type = "text/javascript"
