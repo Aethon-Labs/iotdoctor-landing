@@ -9,7 +9,7 @@ const GetStarted = ({ focusEmailInput }) => (
     <GetStartedContainer>
       <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
       <AnchorLink href="#top">
-        <TryItButton onClick={focusEmailInput}>Sign Up</TryItButton>
+        <TryItButton onClick={focusEmailInput}>Request Access</TryItButton>
       </AnchorLink>
       <Subtitle>No credit card required.</Subtitle>
     </GetStartedContainer>

@@ -17,7 +17,9 @@ const Header = ({ nameInput }) => {
       }
     }
   `)
-  const [submitButtonText, setSubmitButtonText] = React.useState("Sign Up")
+  const [submitButtonText, setSubmitButtonText] = React.useState(
+    "Request Access"
+  )
   const companyInput = React.useRef()
   const emailInput = React.useRef()
 
@@ -187,8 +189,7 @@ const HeaderInput = styled.input`
 `
 
 const HeaderButton = styled.button`
-  min-width: 228.637px;
-  max-width: 228.637px;
+  width: 249.2px;
   font-weight: 500;
   font-size: 14px;
   color: white;
