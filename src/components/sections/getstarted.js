@@ -8,9 +8,9 @@ const GetStarted = ({ focusEmailInput }) => (
   <Section>
     <GetStartedContainer>
       <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
-      <AnchorLink href="#top">
+      <StyledAnchorLink href="#top">
         <TryItButton onClick={focusEmailInput}>Request Access</TryItButton>
-      </AnchorLink>
+      </StyledAnchorLink>
       <Subtitle>No credit card required.</Subtitle>
     </GetStartedContainer>
   </Section>
@@ -29,6 +29,10 @@ const GetStartedContainer = styled(Container)`
 const GetStartedTitle = styled.h3`
   margin: 0 auto 32px;
   text-align: center;
+`
+
+const StyledAnchorLink = styled(AnchorLink)`
+  text-decoration: none;
 `
 
 const TryItButton = styled.button`
