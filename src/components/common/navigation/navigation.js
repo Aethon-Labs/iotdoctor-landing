@@ -49,15 +49,19 @@ export default class Navigation extends Component {
 
   getNavAnchorLink = item => {
     // TODO: Enable this to link back to home page
-    const onIndexPage = window.location.pathname === "/"
+    // TODO: Window breaks production Gatsby... use it elsehow.
+    // const onIndexPage = window.location.pathname === "/"
 
-    const onClick = () => {
-      if (!onIndexPage) window.location.assign(`/#${item.toLowerCase()}`)
-      this.closeMobileMenu()
-    }
+    // const onClick = () => {
+    //   if (!onIndexPage) window.location.assign(`/#${item.toLowerCase()}`)
+    //   this.closeMobileMenu()
+    // }
 
     return (
-      <AnchorLink href={`#${item.toLowerCase()}`} onClick={onClick}>
+      <AnchorLink
+        href={`#${item.toLowerCase()}`}
+        onClick={this.closeMobileMenu}
+      >
         {item}
       </AnchorLink>
     )
