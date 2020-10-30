@@ -47,11 +47,21 @@ export default class Navigation extends Component {
     }
   }
 
-  getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
-      {item}
-    </AnchorLink>
-  )
+  getNavAnchorLink = item => {
+    // TODO: Enable this to link back to home page
+    const onIndexPage = window.location.pathname === "/"
+
+    const onClick = () => {
+      if (!onIndexPage) window.location.assign(`/#${item.toLowerCase()}`)
+      this.closeMobileMenu()
+    }
+
+    return (
+      <AnchorLink href={`#${item.toLowerCase()}`} onClick={onClick}>
+        {item}
+      </AnchorLink>
+    )
+  }
 
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
@@ -97,7 +107,9 @@ export default class Navigation extends Component {
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
             <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-              <button onClick={this.props.focusEmailInput}>Request Access</button>
+              <button onClick={this.props.focusEmailInput}>
+                Request Access
+              </button>
             </AnchorLink>
           </ActionsContainer>
         </StyledContainer>

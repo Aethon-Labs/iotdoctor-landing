@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import Navigation from "../components/common/navigation/navigation"
+// import Navigation from "../components/common/navigation/navigation"
 import Layout from "../components/common/layout/layout"
 import SEO from "../components/common/layout/seo"
 import { Container } from "../components/global"
@@ -9,8 +9,8 @@ import { Container } from "../components/global"
 const TermsAndPrivacy = () => (
   <Layout>
     <SEO title="Terms of Use and Privacy Policy" />
-    <Navigation focusEmailInput={() => {}} />
-    <NavbarSpacer />
+    {/* <Navigation focusEmailInput={() => {}} /> */}
+    {/* <NavbarSpacer /> */}
     <Container>
       <TermsOfUse />
     </Container>
