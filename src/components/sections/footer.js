@@ -28,10 +28,14 @@ const Footer = () => (
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>Social</span>
+        <span>Legal</span>
         <ul>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
+          <li>
+            <a href="/terms-and-privacy">Privacy</a>
+          </li>
+          <li>
+            <a href="/terms-and-privacy">Terms</a>
+          </li>
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
@@ -75,6 +79,13 @@ const FooterColumn = styled.div`
       margin-bottom: 12px;
       font-family: ${props => props.theme.font.normal};
       font-size: 15px;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 `
