@@ -6024,6 +6024,13 @@ gatsby-page-utils@^0.0.24:
     micromatch "^3.1.10"
     slash "^3.0.0"
 
+gatsby-plugin-autopilot@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-autopilot/-/gatsby-plugin-autopilot-1.0.4.tgz#946d74f1e0637cc628cbe5dbae833fdf4a6d0ec8"
+  integrity sha512-yOuj5DWMcfeYgOER8klHo0nrT/GMZ5NXMtwsL9FqCqtyXwOqOfQyeUbAlLoZVra+YNIlS61oHGV3ok7p6w5n/A==
+  dependencies:
+    react "16.13.1"
+
 gatsby-plugin-manifest@^2.2.20:
   version "2.2.20"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.20.tgz#67fa1d6335846097364c2eceece5a4bdc326706e"
@@ -11209,6 +11216,15 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
+
+react@16.13.1:
+  version "16.13.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
+  integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
 
 react@^16.10.2:
   version "16.10.2"

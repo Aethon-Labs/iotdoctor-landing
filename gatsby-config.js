@@ -21,6 +21,16 @@ module.exports = {
     },
 
     {
+      resolve: `gatsby-plugin-autopilot`,
+      options: {
+        apiUrl: "https://turboeagle.co/anywhere/", // Your unique api URL, found in your tracking code settings in your Autopilot dashboard.
+        trackingId:
+          "0171b0d54bdc4946abc08690fb8dce891a0ee4fc585c4bb39cc1df5f14b1adbc", // Your unique tracking ID, also found in your tracking code settings.
+        app: true, // Determines whether to load webpage or app tracking code.
+      },
+    },
+
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
