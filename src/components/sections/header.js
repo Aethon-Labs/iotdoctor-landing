@@ -81,7 +81,7 @@ const Header = ({ nameInput }) => {
                 placeholder="Your email"
                 ref={emailInput}
               />
-              <HeaderButton>{submitButtonText}</HeaderButton>
+              <HeaderButton value={submitButtonText} type="submit" />
             </HeaderForm>
           </HeaderTextGroup>
           <ImageWrapper>
@@ -188,7 +188,7 @@ const HeaderInput = styled.input`
   }
 `
 
-const HeaderButton = styled.button`
+const HeaderButton = styled.input`
   width: 249.2px;
   font-weight: 500;
   font-size: 14px;
